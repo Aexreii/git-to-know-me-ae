@@ -1,7 +1,5 @@
 # 🚀 git-to-know-me-ae
 
-# 🚀 git-to-know-me-ae
-
 > A personal portfolio app built with **React Native + Supabase**, showcasing my journey as a Computer Science student.
 
 ---
@@ -15,6 +13,14 @@ I wanted to create something that blends **practice** (databases, CRUD, authenti
 - Practice full-stack mobile development with Supabase.
 - Share a glimpse of who I am as a CS student.
 - Provide a structured space to showcase projects and interact with users.
+
+---
+
+## 🎨 Design Direction
+- **Design Style:** Neobrutalism  
+- **Color Palette:** Retro-inspired colors (warm pastels, bold blues, muted reds, off-whites)  
+- **Typography:** Archivo Black / Typewriter font  
+- **Mood:** Playful, minimal, and authentic  
 
 ---
 
