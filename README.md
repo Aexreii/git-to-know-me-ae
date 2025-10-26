@@ -1,5 +1,7 @@
 # 🚀 git-to-know-me-ae
 
+# 🚀 git-to-know-me-ae
+
 > A personal portfolio app built with **React Native + Supabase**, showcasing my journey as a Computer Science student.
 
 ---
@@ -10,45 +12,51 @@ I wanted to create something that blends **practice** (databases, CRUD, authenti
 
 **App Goals:**
 - Serve as my interactive portfolio.
-- Practice full-stack mobile development.
+- Practice full-stack mobile development with Supabase.
 - Share a glimpse of who I am as a CS student.
+- Provide a structured space to showcase projects and interact with users.
 
 ---
 
 ## 🎯 Features
-- 👨‍💻 **About Me** – My background, skills, and journey.
-- 📂 **Projects Showcase** – My CS projects with links & descriptions.
-- 📝 **Learning Journal** – Track my coding lessons and reflections.
-- 🎨 **Coding Moodboard** – A creative space (quotes, snippets, playlists).
-- 📬 **Contact / Links** – Quick links to GitHub, LinkedIn, etc.
+### 👥 User Side
+- 🏠 **Landing Page** – Users are welcomed with a clean landing page that displays my profile and recent projects.
+- 💼 **Portfolio Showcase** – View my previous projects with descriptions, screenshots, and GitHub links.
+- 🔐 **User Authentication** – Users can create an account and log in using Supabase Auth.
+- 💬 **Chatbot (Assistant)** – A friendly chatbot that helps users navigate through the app or learn more about me.
+- 📬 **Contact / Links** – Direct links to my GitHub, LinkedIn, or other platforms.
+
+### 🧑‍💻 Admin Side
+- 🧭 **Admin Dashboard** – A private section for managing the app’s content.
+- ✏️ **CRUD for Projects** – Admin can add, edit, or delete projects that appear on the landing page.
+- 🗂️ **Post Management Module** – Easily post new content, update project info, or remove outdated ones.
+- 🔒 **Protected Access** – Only authenticated admins can access the dashboard.
 
 ---
 
 ## 🛠️ Tech Stack
 - **React Native (Expo)** – Cross-platform mobile framework.
-- **Supabase** – Backend (database, authentication, storage).
-- **GitHub** – Version control & commits streak ✨.
-- *(Future idea: AI-powered features — suggested add-ons later!)*
-
----
-
-## 📸 Screenshots (Soon!)
-I’ll update this section as the app comes alive.  
+- **Supabase** – Backend (database, authentication, and storage).
+- **React Navigation** – Page and tab navigation.
+- **Tailwind / NativeWind** – For quick, responsive styling.
+- **GitHub** – Version control & commit streak tracker.
+- *(Future idea: AI-powered features or smarter chatbot integration!)*
 
 ---
 
 ## 🗓️ Development Timeline
-- **Week 1:** Setup, design, connect Supabase.
-- **Week 2:** Core sections (About, Projects, Contact).
-- **Week 3:** CRUD features (Journal, Moodboard).
-- **Week 4:** Polish UI, testing, documentation.
+| Week | Focus | Goals |
+|------|--------|-------|
+| **Week 1** | Setup & Design | Create Expo project, set up Supabase, navigation, and basic UI layout. |
+| **Week 2** | Core User Features | Build landing page, project showcase, and Supabase auth. |
+| **Week 3** | Admin + CRUD | Create admin dashboard, add/edit/delete project modules, integrate chatbot. |
+| **Week 4** | Polish & Launch | Styling, testing, screenshots, and final deployment. |
 
 ---
 
 ## 🚦 How to Run
-Clone the repo:
 ```bash
-git clone https://github.com/yourusername/git-to-know-me-ae.git
+git clone https://github.com/Aexreii/git-to-know-me-ae.git
 cd git-to-know-me-ae
 npm install
 npx expo start
