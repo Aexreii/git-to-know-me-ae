@@ -9,6 +9,8 @@ import { LoginScreen } from './LoginScreen';
 import { LandingPage } from './LandingPage';
 import { AdminPage } from './AdminPage';
 import { ProjectDetailScreen } from './ProjectDetailScreen';
+import { ChatbotScreen } from './ChatbotScreen';
+import { DeveloperInfoScreen } from './DeveloperInfoScreen';
 import { commonStyles } from './commonStyles';
 
 // --- Mock Data ---
@@ -46,7 +48,7 @@ const addTask = (text) => {
 // --- Main App Component ---
 
 export default function App() {
-  const [view, setView] = useState('login'); // 'login', 'landing', 'admin', 'projectDetail'
+  const [view, setView] = useState('login'); // 'login', 'landing', 'admin', 'projectDetail', 'chatbot', 'developerInfo'
   const [isAdmin, setIsAdmin] = useState(false);
   const [projects] = useState(initialProjects);
   const [username, setUsername] = useState('');
@@ -68,6 +70,10 @@ export default function App() {
         return <AdminPage projects={projects} setView={setView} />;
       case 'projectDetail':
         return <ProjectDetailScreen project={selectedProject} setView={setView} />;
+      case 'chatbot':
+        return <ChatbotScreen setView={setView} />;
+      case 'developerInfo':
+        return <DeveloperInfoScreen setView={setView} />;
       case 'login':
       default:
         return <LoginScreen setView={setView} setIsAdmin={setIsAdmin} username={username} password={password} setUsername={setUsername} setPassword={setPassword} />;

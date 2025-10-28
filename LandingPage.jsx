@@ -14,7 +14,9 @@ export const LandingPage = ({ projects, isAdmin, setView, handleLogout, setSelec
             <Text style={styles.adminLink}>Admin Page</Text>
           </TouchableOpacity>
         )}
+        <AppButton title="About Me" onPress={() => setView('developerInfo')} />
         <AppButton title={isAdmin ? 'Logout' : 'Login'} onPress={handleLogout} />
+        <AppButton title="Chat" onPress={() => setView('chatbot')} primary />
       </View>
     </View>
     {projects.map(project => (
