@@ -1,68 +1,120 @@
 # 🚀 git-to-know-me-ae
 
-> A personal portfolio app built with **React Native + Supabase**, showcasing my journey as a Computer Science student.
+A **mobile-first portfolio application** built with **React Native** and **Expo**, featuring a **sleek Neobrutalist-themed UI**, **user authentication**, and a **full admin dashboard** for managing projects.
 
 ---
 
-## 📖 About the Project
-This is not just another mobile app — it’s **me, in code form**.  
-I wanted to create something that blends **practice** (databases, CRUD, authentication) with **creativity** (my vibe, coding moodboard, and personal touch).
+## 🎯 Objective
 
-**App Goals:**
-- Serve as my interactive portfolio.
-- Practice full-stack mobile development with Supabase.
-- Share a glimpse of who I am as a CS student.
-- Provide a structured space to showcase projects and interact with users.
+To develop a **cross-platform portfolio application** (iOS, Android, and Web) using **React Native and Expo Go**.  
+The app follows a **Neobrutalist design aesthetic** and includes **separate views** for public users and an administrator.
 
 ---
 
-## 🎨 Design Direction
-- **Design Style:** Neobrutalism  
-- **Color Palette:** Retro-inspired colors (warm pastels, bold blues, muted reds, off-whites)  
-- **Typography:** Archivo Black / Typewriter font  
-- **Mood:** Playful, minimal, and authentic  
+## 🚀 Features
+
+The application is structured around **three main screens**:
+
+### 1. 🔐 Login Screen
+- Entry point for all users.
+- Includes inputs for **username** and **password**.
+- **Primary button:** “Log In”.
+- **Secondary option:** “Continue as Guest” for public viewing.
+
+### 2. 🏠 Landing Page (Public View)
+- The **main portfolio showcase** visible to guests and logged-in users.
+- Displays a list of all **Works (projects)** from the database.
+- Each project is presented in a **Project Card** component:
+  - Title  
+  - Description  
+  - Technologies Used
+- Conditionally shows an **Admin Page link** if the user is an admin.
+- Includes a **Login** or **Logout** button depending on authentication state.
+
+### 3. 🧑‍💻 Admin Page (Private View)
+- Accessible **only to authenticated administrators**.
+- Provides **full CRUD functionality** for managing projects:
+  - **Create:** Add a new project using a form.
+  - **Read:** View a list of existing projects with admin controls.
+  - **Update:** Edit existing projects using an “Edit” button.
+  - **Delete:** Remove projects with a confirmation modal.
 
 ---
 
-## 🎯 Features
-### 👥 User Side
-- 🏠 **Landing Page** – Users are welcomed with a clean landing page that displays my profile and recent projects.
-- 💼 **Portfolio Showcase** – View my previous projects with descriptions, screenshots, and GitHub links.
-- 🔐 **User Authentication** – Users can create an account and log in using Supabase Auth.
-- 💬 **Chatbot (Assistant)** – A friendly chatbot that helps users navigate through the app or learn more about me.
-- 📬 **Contact / Links** – Direct links to my GitHub, LinkedIn, or other platforms.
+## 🧱 Technical Stack & Architecture
 
-### 🧑‍💻 Admin Side
-- 🧭 **Admin Dashboard** – A private section for managing the app’s content.
-- ✏️ **CRUD for Projects** – Admin can add, edit, or delete projects that appear on the landing page.
-- 🗂️ **Post Management Module** – Easily post new content, update project info, or remove outdated ones.
-- 🔒 **Protected Access** – Only authenticated admins can access the dashboard.
+| Layer | Technology |
+|-------|-------------|
+| **Framework** | React Native (Expo) |
+| **Version Control** | GitHub |
+| **Authentication** | Supabase Auth |
+| **Database** | Supabase (PostgreSQL) |
+| **Styling** | Neobrutalist UI with React Native StyleSheet |
 
----
+### 🗝️ Authentication
+- Powered by **Supabase Auth**.
+- Handles logic to differentiate between:
+  - Guests
+  - Standard Users
+  - Administrators
 
-## 🛠️ Tech Stack
-- **React Native (Expo)** – Cross-platform mobile framework.
-- **Supabase** – Backend (database, authentication, and storage).
-- **React Navigation** – Page and tab navigation.
-- **Tailwind / NativeWind** – For quick, responsive styling.
-- **GitHub** – Version control & commit streak tracker.
-- *(Future idea: AI-powered features or smarter chatbot integration!)*
+### 💾 Database (CRUD)
+- Uses **Supabase PostgreSQL** for project storage.
+- All CRUD operations comply with **row-level security (RLS)** policies.
+- Projects are stored in a **public `projects` table**.
 
----
-
-## 🗓️ Development Timeline
-| Week | Focus | Goals |
-|------|--------|-------|
-| **Week 1** | Setup & Design | Create Expo project, set up Supabase, navigation, and basic UI layout. |
-| **Week 2** | Core User Features | Build landing page, project showcase, and Supabase auth. |
-| **Week 3** | Admin + CRUD | Create admin dashboard, add/edit/delete project modules, integrate chatbot. |
-| **Week 4** | Polish & Launch | Styling, testing, screenshots, and final deployment. |
+### 🎨 Styling & Design
+- **Neobrutalism principles**:
+  - High-contrast, vibrant color palette  
+  - Bold, chunky typography (Archivo Black / Typewriter style)  
+  - Offset drop-shadows for buttons, cards, and UI elements  
 
 ---
 
-## 🚦 How to Run
+## 🗺️ Project Roadmap
+
+### 1️⃣ Initial Template
+- Build a **single-file `App.jsx`** containing all three screens.  
+- Implement **mock authentication** and **state-based navigation** to simulate flow in **Expo Go**.
+
+### 2️⃣ Backend Integration
+- Refactor the template to integrate **live Supabase Auth** and **Database CRUD** operations.  
+- Enable real-time project management for authenticated admins.
+
+### 3️⃣ Deployment
+- Deploy the final build to:
+  - **Web**
+  - **iOS**
+  - **Android**
+
+---
+
+## 🧩 Future Enhancements
+- Implement **image uploads** for project thumbnails.  
+- Add **theme toggle** (light/dark Neobrutalism).  
+- Integrate **in-app chat or feedback form** for users.  
+- Enable **offline caching** for faster access.
+
+---
+
+## 🖌️ Design Language
+- **Aesthetic:** Neobrutalism  
+- **Font Styles:** Archivo Black / Typewriter  
+- **UI Feel:** Retro, bold, minimalistic, and tactile  
+
+---
+
+## 📦 Installation & Setup
+
 ```bash
-git clone https://github.com/Aexreii/git-to-know-me-ae.git
-cd git-to-know-me-ae
+# Clone the repository
+git clone https://github.com/Aexreii/mobile-portfolio-app.git
+
+# Navigate into the project
+cd mobile-portfolio-app
+
+# Install dependencies
 npm install
+
+# Start the Expo development server
 npx expo start
